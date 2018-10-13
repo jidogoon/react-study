@@ -19,7 +19,7 @@ class FirstApp extends Component {
           >
           <img src={logo} className="App-logo" alt="logo" />
           {/*<p>first {placeholder}</p>*/}
-          <HelloComponent1 name={placeholder}/>
+          <HelloComponent1 placeholder={placeholder}/>
         </div>
       </Fragment>
     );
