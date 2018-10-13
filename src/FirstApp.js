@@ -1,11 +1,12 @@
 import React, {Component, Fragment} from 'react';
 import logo from './logo.svg';  // 파일명은 이렇게 변수처럼
 import './FirstApp.css';
+import HelloComponent1 from "./components/HelloComponent";
 
 class FirstApp extends Component {
   render() {
     function getPlaceholder() {
-      return "React";
+      return "react";
     }
 
     const placeholder = getPlaceholder();
@@ -17,7 +18,8 @@ class FirstApp extends Component {
           // 아니면 이렇게
           >
           <img src={logo} className="App-logo" alt="logo" />
-          <p>first {placeholder}</p>
+          {/*<p>first {placeholder}</p>*/}
+          <HelloComponent1 name={placeholder}/>
         </div>
       </Fragment>
     );
