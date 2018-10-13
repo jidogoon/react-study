@@ -1,29 +1,25 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component, Fragment} from 'react';
+import logo from './logo.svg';  // 파일명은 이렇게 변수처럼
 import './FirstApp.css';
 
 class FirstApp extends Component {
   render() {
-    const placeholder = "React";
+    function getPlaceholder() {
+      return "React";
+    }
+
+    const placeholder = getPlaceholder();
     return (
-      // 이렇게 리턴하는 전부가 JSX
-      <div className="App">
-        <header className="App-header">
+      // 여기서 리턴하는 전부가 JSX
+      <Fragment>
+        {/*주석 이렇게 하거나*/}
+        <div className="App"
+          // 아니면 이렇게
+          >
           <img src={logo} className="App-logo" alt="logo" />
-          <p>Hello {placeholder}</p>
-          {/*<p>*/}
-            {/*Edit <code>src/App.js</code> and save to reload.*/}
-          {/*</p>*/}
-          {/*<a*/}
-            {/*className="App-link"*/}
-            {/*href="https://reactjs.org"*/}
-            {/*target="_blank"*/}
-            {/*rel="noopener noreferrer"*/}
-          {/*>*/}
-            {/*Learn React*/}
-          {/*</a>*/}
-        </header>
-      </div>
+          <p>first {placeholder}</p>
+        </div>
+      </Fragment>
     );
   }
 }
